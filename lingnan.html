@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -1229,6 +1229,13 @@
         .nav-links a:hover {
             color: #B89653;
         }
+        @media (max-width:768px){
+            .nav-bar{padding:0 4%;}
+            .nav-links{gap:10px;overflow-x:auto;flex-shrink:0;-ms-overflow-style:none;scrollbar-width:none;}
+            .nav-links::-webkit-scrollbar{display:none;}
+            .nav-links a{font-size:11px;white-space:nowrap;}
+            .nav-logo{font-size:12px;flex-shrink:0;margin-right:8px;}
+        }
 
         body .fade-in {
             transform: translateY(15px);
@@ -1923,6 +1930,148 @@
         body.light-mode .drawer-info-row { color: #666666; }
         body.light-mode .drawer-highlights-list li { color: #666666; }
         body.light-mode .drawer-funfact-text { color: #666666; }
+
+        /* ========== Light mode comprehensive overrides (ensure text visible on light bg) ========== */
+        body.light-mode { background: #F5F5F5; color: #222222; }
+
+        /* Banner / hero section */
+        body.light-mode .banner { background: linear-gradient(180deg, #FAFAFA 0%, #F0EDE6 100%); }
+        body.light-mode .banner-logo { color: #8B6914; }
+        body.light-mode .banner-titles h1 { color: #222222; text-shadow: none; }
+        body.light-mode .banner-subtitle-zh { color: #555555; }
+        body.light-mode .banner-subtitle-en { color: #8B6914; }
+        body.light-mode .banner-line { background: #8B6914; }
+        body.light-mode .banner-arrow { color: #8B6914; }
+
+        /* Navigation */
+        body.light-mode .nav-bar { background: rgba(245,245,245,0.5); }
+        body.light-mode .nav-bar.scrolled { background: rgba(245,245,245,0.95); }
+        body.light-mode .nav-logo { color: #8B6914; }
+        body.light-mode .nav-links a { color: #555555; }
+        body.light-mode .nav-links a:hover { color: #8B6914; }
+        body.light-mode .nav-links a.active { color: #8B6914; border-color: #8B6914; }
+
+        /* Section titles & headings */
+        body.light-mode .treasures-title { color: #8B6914; }
+        body.light-mode .life-title { color: #8B6914; }
+        body.light-mode .heritage-title { color: #8B6914; }
+        body.light-mode .heritage-hero-title { color: #8B6914; }
+        body.light-mode .heritage-hero-subtitle { color: #555555; }
+        body.light-mode .heritage-name { color: #222222; }
+        body.light-mode .heritage-subtitle { color: #666666; }
+        body.light-mode .arch-title { color: #8B6914; }
+        body.light-mode .arch-card-title, body.light-mode .arch-card-info h4 { color: #222222; }
+        body.light-mode .arch-info-title { color: #8B6914; }
+        body.light-mode .arch-detail-title { color: #8B6914; }
+        body.light-mode .arch-detail p { color: #555555; }
+        body.light-mode .craft-title { color: #8B6914; }
+        body.light-mode .craft-step-title { color: #222222; }
+        body.light-mode .craft-step-text p { color: #555555; }
+        body.light-mode .food-title { color: #8B6914; }
+        body.light-mode .food-city-name { color: #222222; }
+        body.light-mode .food-item-name { color: #222222; }
+        body.light-mode .food-item-info p { color: #555555; }
+        body.light-mode .ht-title { color: #8B6914; }
+        body.light-mode .ri-title { color: #8B6914; }
+        body.light-mode .yueyun-title { color: #8B6914; }
+
+        /* Heritage-timeline active node — THE MOST CRITICAL FIX (white text on light bg) */
+        body.light-mode .ht-node.active .ht-node-title { color: #8B6914; }
+        body.light-mode .ht-node.active .ht-node-text { color: #222222; }
+        body.light-mode .ht-node-title { color: #222222; }
+        body.light-mode .ht-node-text { color: #555555; }
+        body.light-mode .ht-dot { border-color: #8B6914; }
+        body.light-mode .ht-node.active .ht-dot { background: #8B6914; }
+        body.light-mode .ht-timeline-line { background: linear-gradient(to bottom, #8B6914 0%, #8B6914 0%, rgba(139,105,20,0.25) 0%, rgba(139,105,20,0.25) 100%); }
+
+        /* Real icons (名人) */
+        body.light-mode .ri-card { background: #FFFFFF; border-color: rgba(139,105,20,0.3); }
+        body.light-mode .ri-name { color: #222222; }
+        body.light-mode .ri-bio { color: #555555; }
+        body.light-mode .heritage-master-info h4 { color: #222222; }
+        body.light-mode .heritage-master-info p { color: #555555; }
+        body.light-mode .heritage-intro-text { color: #555555; }
+        body.light-mode .heritage-intro-desc { color: #555555; }
+
+        /* 粤语馆 */
+        body.light-mode .yy-phrase { color: #222222; }
+        body.light-mode .yy-translation { color: #555555; }
+        body.light-mode .yy-card { background: #FFFFFF; border-color: rgba(139,105,20,0.3); }
+        body.light-mode .phrase-card { background: #FFFFFF; border-color: rgba(139,105,20,0.3); color: #222222; }
+        body.light-mode .phrase-card:hover { background: rgba(139,105,20,0.04); color: #222222; }
+        body.light-mode .canto-word { color: #222222; }
+        body.light-mode .jyutping { color: #8B6914; }
+        body.light-mode .meaning { color: #555555; }
+
+        /* Drawer details */
+        body.light-mode .drawer-title { color: #8B6914; }
+        body.light-mode .drawer-tag { background: rgba(139,105,20,0.12); color: #8B6914; border-color: rgba(139,105,20,0.3); }
+        body.light-mode .drawer-divider { background: rgba(139,105,20,0.25); }
+        body.light-mode .drawer-close-btn { background: #FFFFFF; border-color: rgba(139,105,20,0.4); color: #8B6914; }
+        body.light-mode .drawer-back { background: #FFFFFF; border-color: rgba(139,105,20,0.4); color: #8B6914; }
+        body.light-mode .drawer-back:hover { background: rgba(139,105,20,0.08); }
+
+        /* Section backgrounds */
+        body.light-mode .treasures-section { background: #F5F5F5; }
+        body.light-mode .heritage-timeline-section { background: #F5F5F5; }
+        body.light-mode .real-icons-section { background: #F5F5F5; }
+        body.light-mode .heritage-section { background: #F5F5F5; }
+        body.light-mode .life-section { background: #F5F5F5; }
+        body.light-mode .arch-scroll { background: #F5F5F5; }
+        body.light-mode .craft-steps { background: #F5F5F5; }
+        body.light-mode .food-map-wrap { background: #F5F5F5; }
+        body.light-mode .yueyun-section { background: #F5F5F5; }
+        body.light-mode #page-heritage,
+        body.light-mode #page-architecture,
+        body.light-mode #page-craft,
+        body.light-mode #page-food,
+        body.light-mode #page-favorites { background: #F5F5F5; color: #222222; }
+
+        /* Cards and content boxes */
+        body.light-mode .treasure-card { background: #FFFFFF; border-color: rgba(139,105,20,0.25); }
+        body.light-mode .treasure-card-name { color: #222222; }
+        body.light-mode .treasure-card-subtitle { color: #8B6914; }
+        body.light-mode .life-item, body.light-mode .life-card { background: #FFFFFF; border-color: rgba(139,105,20,0.25); }
+        body.light-mode .life-name { color: #222222; }
+        body.light-mode .life-desc { color: #555555; }
+        body.light-mode .arch-card { background: #FFFFFF; border-color: rgba(139,105,20,0.25); }
+        body.light-mode .arch-card-info { color: #555555; }
+        body.light-mode .arch-detail { background: #FFFFFF; }
+        body.light-mode .arch-detail p { color: #555555; }
+        body.light-mode .food-detail { background: #FFFFFF; border-color: rgba(139,105,20,0.25); }
+        body.light-mode .fav-page { background: #F5F5F5; }
+        body.light-mode .fav-card { background: #FFFFFF; border-color: rgba(139,105,20,0.3); }
+        body.light-mode .fav-card h5 { color: #222222; }
+        body.light-mode .fav-card-placeholder { background: rgba(139,105,20,0.06); border-color: rgba(139,105,20,0.25); color: #8B6914; }
+        body.light-mode .fav-desc { color: #555555; }
+        body.light-mode .fav-title { color: #222222; }
+        body.light-mode .fav-subtitle { color: #555555; }
+
+        /* Progress / chrome */
+        body.light-mode .scroll-progress { background: #8B6914; box-shadow: 0 0 8px rgba(139,105,20,0.4); }
+        body.light-mode .scroll-hint { color: rgba(0,0,0,0.3); }
+        body.light-mode .dark-toggle { background: #FFFFFF; border-color: rgba(139,105,20,0.4); color: #8B6914; }
+        body.light-mode .dark-toggle:hover { background: rgba(139,105,20,0.08); color: #8B6914; }
+        body.light-mode .custom-cursor { border-color: #8B6914; }
+        body.light-mode .back-to-top { background: #FFFFFF; border-color: rgba(139,105,20,0.4); color: #8B6914; }
+        body.light-mode .back-to-top:hover { background: rgba(139,105,20,0.08); color: #8B6914; }
+        body.light-mode .achievement-toast { background: #FFFFFF; border-color: rgba(139,105,20,0.3); color: #222222; }
+        body.light-mode .at-label { color: #8B6914; }
+        body.light-mode .at-name { color: #222222; }
+        body.light-mode .at-desc { color: #555555; }
+        body.light-mode .share-panel { background: #F5F5F5; color: #222222; }
+        body.light-mode .share-card-inner { background: #FFFFFF; border-color: rgba(139,105,20,0.3); }
+        body.light-mode .share-title { color: #222222; }
+        body.light-mode .share-subtitle { color: #555555; }
+
+        /* Footer */
+        body.light-mode .footer { background: #F0EDE6; color: #222222; }
+        body.light-mode .footer-logo { color: #8B6914; }
+        body.light-mode .footer-copy { color: #222222; }
+
+        /* Generic gold accents (#C8AA6E, #B89653, #D4AF37 -> #8B6914 on light bg) */
+        body.light-mode .gold-line { background: #8B6914; }
+        body.light-mode .section-divider { background: rgba(139,105,20,0.25); }
     </style>
 </head>
 <body>
@@ -2157,7 +2306,7 @@
                 </div>
                 <div class="ri-card">
                     <div class="ri-portrait">
-                        <img src="https://aka.doubaocdn.com/s/WVh01wVrA9" alt="詹天佑肖像">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical+black+and+white+portrait+photograph+of+Zhan+Tianyou+famous+Chinese+railway+engineer+father+of+Chinas+railways+formal+suit+serious+expression+vintage+sepia+tone+professional+portrait+8K&image_size=square_hd" alt="詹天佑肖像">
                     </div>
                     <div class="ri-info">
                         <div class="ri-name">詹天佑</div>
@@ -2167,7 +2316,7 @@
                 </div>
                 <div class="ri-card">
                     <div class="ri-portrait">
-                        <img src="https://aka.doubaocdn.com/s/QBWW1wVrAA" alt="孙中山肖像">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical+black+and+white+portrait+photograph+of+Sun+Yat+sen+Dr+Sun+Zhongshan+founding+father+of+modern+China+in+formal+Chinese+jacket+zhongshan+suit+serious+dignified+expression+vintage+sepia+tone+8K&image_size=square_hd" alt="孙中山肖像">
                     </div>
                     <div class="ri-info">
                         <div class="ri-name">孙中山</div>
@@ -2177,7 +2326,7 @@
                 </div>
                 <div class="ri-card">
                     <div class="ri-portrait">
-                        <img src="https://aka.doubaocdn.com/s/aBP91wVrAB" alt="冼星海肖像">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical+black+and+white+portrait+photograph+of+Xian+Xinghai+famous+Chinese+composer+the+peoples+musician+conductor+in+formal+Western+suit+serious+artistic+expression+vintage+sepia+tone+professional+8K&image_size=square_hd" alt="冼星海肖像">
                     </div>
                     <div class="ri-info">
                         <div class="ri-name">冼星海</div>
@@ -2411,7 +2560,7 @@
                 title: '粤剧',
                 tag: '世界非遗',
                 icon: '🎭',
-                img: 'https://aka.doubaocdn.com/s/O0491wUHAl',
+                img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Cantonese+opera+performers+in+elaborate+traditional+costumes+and+makeup+on+stage+Guangdong+Chinese+opera+theatrical+performance+vivid+colors+8K&image_size=square_hd',
                 origin: '起源于明代',
                 distribution: '广东、广西、香港、澳门',
                 level: '联合国教科文组织非遗',
@@ -2426,7 +2575,7 @@
                 title: '广彩',
                 tag: '广州名片',
                 icon: '🏺',
-                img: 'https://aka.doubaocdn.com/s/S0121wUGik',
+                img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Guangzhou+decorative+gold+porcelain+Guangcai+finished+vase+with+intricate+gold+and+colorful+patterns+Maritime+Silk+Road+export+ceramics+display+8K&image_size=square_hd',
                 origin: '起源于清代康熙年间',
                 distribution: '广州',
                 level: '国家级非物质文化遗产',
@@ -2441,7 +2590,7 @@
                 title: '英歌舞',
                 tag: '潮汕之魂',
                 icon: '💃',
-                img: 'https://aka.doubaocdn.com/s/Ywrn1wUGil',
+                img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chaoshan+Yingge+dance+traditional+folk+dance+performers+in+vivid+costumes+holding+sticks+vigorous+movement+heroic+Water+Margin+performance+8K&image_size=square_hd',
                 origin: '起源于明代',
                 distribution: '潮汕地区',
                 level: '国家级非物质文化遗产',
@@ -2456,7 +2605,7 @@
                 title: '骑楼',
                 tag: '岭南建筑',
                 icon: '🏛️',
-                img: 'https://aka.doubaocdn.com/s/zxlI1wUGj7',
+                img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Guangzhou+qilou+arcade+buildings+colonial+era+East+meets+West+architecture+historic+pedestrian+street+with+covered+walkways+shophouses+8K&image_size=square_hd',
                 origin: '起源于19世纪末',
                 distribution: '广州、厦门、海口',
                 level: '重要文化遗产',
@@ -2471,7 +2620,7 @@
                 title: '龙舟竞渡',
                 tag: '端午盛事',
                 icon: '🐉',
-                img: 'https://aka.doubaocdn.com/s/BhVn1wUGj7',
+                img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+dragon+boat+racing+on+Pearl+River+festival+colorful+long+dragon+boats+with+rowers+paddling+intensely+splashing+water+Duanwu+fierce+competition+8K&image_size=square_hd',
                 origin: '起源于战国时期',
                 distribution: '珠江流域',
                 level: '国家级非物质文化遗产',
@@ -3231,24 +3380,24 @@
         {
             name: '骑楼',
             desc: '中西合璧的商业建筑，底商上层，骑跨街道，遮阳避雨',
-            img: 'https://aka.doubaocdn.com/s/SGLL1wW4Hf',
-            detailImg: 'https://aka.doubaocdn.com/s/SGLL1wW4Hf',
+            img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Guangzhou+qilou+arcade+buildings+pedestrian+street+ornate+facades+colonial+Chinese+Western+fusion+covered+walkway+bustling+street+life+warm+golden+hour+sunlight+8K&image_size=square_hd',
+            detailImg: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Guangzhou+qilou+arcade+buildings+pedestrian+street+ornate+facades+colonial+Chinese+Western+fusion+covered+walkway+bustling+street+life+warm+golden+hour+sunlight+8K&image_size=square_hd',
             history: '骑楼建筑起源于19世纪末的东南亚"五脚基"形式，经华侨传入广东。1888年广州建成了中国第一座骑楼，此后在20世纪20至30年代，骑楼在岭南各大城市蓬勃发展。广州的上下九、北京路，汕头的安平路，海口的中山路都是骑楼建筑的集中区域。骑楼不仅是建筑形式，更是岭南商业文化的载体，见证了百年来的商业变迁。',
             features: '采用"底商上层"的结构，底层沿街退让形成连续的廊道空间，既能遮阳避雨，又为行人提供了舒适的步行环境。骑楼立面融合了巴洛克风格、南洋风格和中国传统元素，形成了独特的岭南建筑美学。'
         },
         {
             name: '西关大屋',
             desc: '广州传统民居，青砖石脚，趟栊门，满洲窗',
-            img: 'https://aka.doubaocdn.com/s/wEsT1wW4Hf',
-            detailImg: 'https://aka.doubaocdn.com/s/wEsT1wW4Hf',
+            img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Xiguan+old+mansion+in+Guangzhou+Lingnan+traditional+house+blue+brick+walls+Manchurian+colored+glass+windows+tanglong+wooden+sliding+door+ornate+courtyard+skylight+8K&image_size=square_hd',
+            detailImg: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Xiguan+old+mansion+in+Guangzhou+Lingnan+traditional+house+blue+brick+walls+Manchurian+colored+glass+windows+tanglong+wooden+sliding+door+ornate+courtyard+skylight+8K&image_size=square_hd',
             history: '西关大屋是清末民初广州西关地区富裕商人和官宦人家的住宅建筑，主要分布在广州荔湾区的宝华路、多宝路、逢源路一带。青砖石脚、趟栊门、满洲窗是西关大屋最鲜明的三大标志。这些大屋代表了当时广州最高水平的建筑工艺和居住文化。',
             features: '西关大屋采用三间两廊的平面布局，中轴线上依次为门厅、天井、轿厅、正厅、神厅。最具特色的是"满洲窗"——彩色玻璃窗在阳光下变幻出绚丽的色彩，"趟栊门"由横向圆木组成，既可通风又可防盗，青砖石脚则展现了岭南建筑质朴沉稳的气质。'
         },
         {
             name: '镬耳屋',
             desc: '岭南传统民居，屋顶两侧有镬耳状山墙，防火防风',
-            img: 'https://aka.doubaocdn.com/s/VHBL1wW4Hg',
-            detailImg: 'https://aka.doubaocdn.com/s/VHBL1wW4Hg',
+            img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Lingnan+wok+ear+house+traditional+dwelling+Guangdong+village+curved+horse+shoe+shaped+gable+walls+blue+brick+houses+clustered+together+warm+sun+8K&image_size=square_hd',
+            detailImg: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Lingnan+wok+ear+house+traditional+dwelling+Guangdong+village+curved+horse+shoe+shaped+gable+walls+blue+brick+houses+clustered+together+warm+sun+8K&image_size=square_hd',
             history: '镬耳屋是岭南地区最具辨识度的传统民居建筑，主要分布在广东、广西等地。镬耳山墙起源于明代，最初是为了防火而设计的封火山墙，后来逐渐演变为装饰性极强的建筑元素。在封建社会，镬耳屋的数量和规模还代表了一个家族的官阶和地位。',
             features: '镬耳屋最显著的特征是两侧高耸的镬耳形山墙，形似古代铁镬的耳柄。建筑采用青砖灰瓦，结构严谨，内部多进多开间，配有天井采光通风。镬耳屋体现了岭南人"天人合一"的居住理念和精湛的建筑工艺。'
         },
@@ -3263,8 +3412,8 @@
         {
             name: '开平碉楼',
             desc: '世界文化遗产，中西合璧的防御性建筑',
-            img: 'https://aka.doubaocdn.com/s/dLAQ1wW4yi',
-            detailImg: 'https://aka.doubaocdn.com/s/dLAQ1wW4yi',
+            img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Kaiping+Diaolou+watchtower+fortress+UNESCO+world+heritage+multi+story+stone+and+concrete+tower+Chinese+Western+fusion+architecture+standing+in+lush+green+rice+paddies+countryside+golden+light+8K&image_size=square_hd',
+            detailImg: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+architectural+photography+of+Kaiping+Diaolou+watchtower+fortress+UNESCO+world+heritage+multi+story+stone+and+concrete+tower+Chinese+Western+fusion+architecture+standing+in+lush+green+rice+paddies+countryside+golden+light+8K&image_size=square_hd',
             history: '开平碉楼始建于明末清初，大规模兴建则在19世纪末至20世纪初。当时开平地区匪患严重，加上大量华侨在海外致富后回乡建楼，形成了独特的碉楼文化。2007年，开平碉楼与村落被联合国教科文组织列入世界文化遗产名录，成为中国第35处世界遗产。',
             features: '碉楼通常高4至6层，墙体厚实，窗户小而多，具有极强的防御功能。建筑风格中西合璧，既有中国传统建筑元素，又融入了古希腊、古罗马、伊斯兰等多种西方建筑风格。碉楼内部设有水井、粮仓，可长期固守，是岭南华侨文化的伟大见证。'
         }
@@ -3348,58 +3497,58 @@
         {
             name: '岭南传统木屋制作',
             steps: [
-                { title: '择址与奠基', desc: '择址与奠基——岭南木屋讲究"背山面水"，先请风水师定坐向，再开挖地基，铺设青石柱础，隔绝地面湿气', img: 'https://aka.doubaocdn.com/s/O0WG1wW4zt' },
-                { title: '备料与处理', desc: '备料与处理——多选杉木、樟木，质地坚韧、防潮防虫；木材需自然风干3年以上，再进行碳化和防腐处理', img: 'https://aka.doubaocdn.com/s/rGY31wW4zu' },
-                { title: '榫卯加工', desc: '榫卯加工——传统榫卯结构，凹凸咬合，不用一颗钉子却稳固百年；每个榫头都要经过反复打磨，确保严丝合缝', img: 'https://aka.doubaocdn.com/s/cuUq1wW4Dw' },
-                { title: '小立架试装', desc: '小立架试装——正式立架前，先在地面进行试拼装，调整榫卯间隙，确保整体结构精准无误', img: 'https://aka.doubaocdn.com/s/7lnJ1wW4zt' },
-                { title: '立柱与穿梁', desc: '立柱与穿梁——采用穿斗式木构架，立柱直接承檩，抗震性强；立柱时要举行简单的仪式，祈求平安', img: 'https://aka.doubaocdn.com/s/McQG1wW4Dw' },
-                { title: '上梁仪式', desc: '上梁仪式——岭南传统上梁仪式，是木屋建造的核心环节；主梁上要写"上梁大吉"，挂红布、铜钱，寓意招财进宝', img: 'https://aka.doubaocdn.com/s/UM6h1wW4Dw' },
-                { title: '屋面铺瓦', desc: '屋面铺瓦——铺设青灰瓦，坡度陡峭，利于岭南多雨天气排水；屋脊会装饰灰塑图案，增加美观性', img: 'https://aka.doubaocdn.com/s/78de1wW4Du' }
+                { title: '择址与奠基', desc: '择址与奠基——岭南木屋讲究"背山面水"，先请风水师定坐向，再开挖地基，铺设青石柱础，隔绝地面湿气', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Lingnan+traditional+wooden+house+construction+site+foundation+digging+blue+stone+column+base+installed+feng+shui+master+surveying+the+land+traditional+village+setting+8K&image_size=square_hd' },
+                { title: '备料与处理', desc: '备料与处理——多选杉木、樟木，质地坚韧、防潮防虫；木材需自然风干3年以上，再进行碳化和防腐处理', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chinese+fir+and+camphor+wood+logs+stacked+for+drying+outdoor+lumber+yard+traditional+wood+preparation+natural+air+drying+process+woodworking+8K&image_size=square_hd' },
+                { title: '榫卯加工', desc: '榫卯加工——传统榫卯结构，凹凸咬合，不用一颗钉子却稳固百年；每个榫头都要经过反复打磨，确保严丝合缝', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+traditional+Chinese+mortise+and+tenon+wood+joinery+craftsman+hands+carefully+carving+wooden+joints+chisel+and+hammer+wood+shavings+workshop+sunlight+8K&image_size=square_hd' },
+                { title: '小立架试装', desc: '小立架试装——正式立架前，先在地面进行试拼装，调整榫卯间隙，确保整体结构精准无误', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+traditional+Chinese+wooden+house+frame+mock+assembly+on+ground+craftsmen+testing+timber+frame+structure+before+raising+tenon+joints+visible+outdoor+workspace+8K&image_size=square_hd' },
+                { title: '立柱与穿梁', desc: '立柱与穿梁——采用穿斗式木构架，立柱直接承檩，抗震性强；立柱时要举行简单的仪式，祈求平安', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+traditional+Chinese+house+construction+ritual+raising+wooden+pillars+beam+through+column+structure+cross+beam+wooden+frame+being+lifted+by+workers+ceremony+red+cloth+8K&image_size=square_hd' },
+                { title: '上梁仪式', desc: '上梁仪式——岭南传统上梁仪式，是木屋建造的核心环节；主梁上要写"上梁大吉"，挂红布、铜钱，寓意招财进宝', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+traditional+Lingnan+house+roof+beam+raising+ceremony+main+beam+with+red+cloth+and+coins+hanging+lucky+characters+written+villagers+gathered+celebrating+ritual+8K&image_size=square_hd' },
+                { title: '屋面铺瓦', desc: '屋面铺瓦——铺设青灰瓦，坡度陡峭，利于岭南多雨天气排水；屋脊会装饰灰塑图案，增加美观性', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+traditional+Lingnan+house+roof+tile+laying+dark+grey+clay+tiles+steep+pitch+roof+crafter+installing+tiles+rooftop+scenic+overlook+village+background+8K&image_size=square_hd' }
             ]
         },
         {
             name: '广彩瓷烧制',
             steps: [
-                { title: '选胎与打磨', desc: '选胎与打磨——广彩以景德镇白瓷为胎，选用釉面光洁、胎质细腻的瓷坯；师傅用细砂反复打磨，确保彩绘时颜料附着力均匀', img: 'https://aka.doubaocdn.com/s/iKUE1wXL3U' },
-                { title: '勾线定位', desc: '勾线定位——用特制铁针蘸取"料红"勾勒图案轮廓；线条刚劲有力，是广彩"分水"技法的骨架，决定整体布局', img: 'https://aka.doubaocdn.com/s/lgfw1wXL8X' },
-                { title: '填色堆金', desc: '填色堆金——在轮廓内填入五彩颜料，绿色如翡翠、红色如珊瑚；关键处用金水堆出立体图案，"堆金积玉"由此得名', img: 'https://aka.doubaocdn.com/s/CVKX1wXL3V' },
-                { title: '低温烧制', desc: '低温烧制——彩绘完成后入窑，以700-800度低温烧制；烧制时需精准控温，过高颜色会发乌，过低颜色不亮泽', img: 'https://aka.doubaocdn.com/s/cgIY1wXL8X' }
+                { title: '选胎与打磨', desc: '选胎与打磨——广彩以景德镇白瓷为胎，选用釉面光洁、胎质细腻的瓷坯；师傅用细砂反复打磨，确保彩绘时颜料附着力均匀', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+product+photography+of+Jingdezhen+white+porcelain+blanks+unpainted+white+ceramic+vases+and+plates+on+workbench+artisan+sanding+surface+smoothly+fine+sandpaper+studio+8K&image_size=square_hd' },
+                { title: '勾线定位', desc: '勾线定位——用特制铁针蘸取"料红"勾勒图案轮廓；线条刚劲有力，是广彩"分水"技法的骨架，决定整体布局', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Guangcai+porcelain+outlining+process+artisan+hand+holding+thin+iron+needle+dipping+in+red+outline+paint+drawing+fine+lines+on+white+porcelain+vase+intricate+pattern+emerging+8K&image_size=square_hd' },
+                { title: '填色堆金', desc: '填色堆金——在轮廓内填入五彩颜料，绿色如翡翠、红色如珊瑚；关键处用金水堆出立体图案，"堆金积玉"由此得名', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Guangcai+porcelain+coloring+process+artisan+hand+filling+in+vibrant+green+red+blue+colors+into+outlined+pattern+on+porcelain+gold+paint+being+applied+for+raised+gold+relief+8K&image_size=square_hd' },
+                { title: '低温烧制', desc: '低温烧制——彩绘完成后入窑，以700-800度低温烧制；烧制时需精准控温，过高颜色会发乌，过低颜色不亮泽', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+canton+porcelain+kiln+firing+Guangcai+pieces+inside+traditional+kiln+glowing+orange+fire+700+celsius+low+temperature+firing+artisan+monitoring+temperature+8K&image_size=square_hd' }
             ]
         },
         {
             name: '潮州金漆木雕',
             steps: [
-                { title: '选材与干燥', desc: '选材与干燥——潮州木雕首选樟木，纹理细腻、材质柔韧；木材需阴干三年以上，防止雕刻时开裂变形', img: 'https://aka.doubaocdn.com/s/EdJG1wWzIw' },
-                { title: '起草与打胚', desc: '起草与打胚——根据祠堂梁架尺寸放样，用斧头凿出大体轮廓；打胚要预留层次，为后续多层镂空做准备', img: 'https://aka.doubaocdn.com/s/OB711wWzWH' },
-                { title: '分层镂空', desc: '分层镂空——这是潮州木雕的核心技艺，从最深处向外逐层雕刻；薄处仅2-3毫米，却能承受百年摇晃不脱落', img: 'https://aka.doubaocdn.com/s/58Om1wWzW8' },
-                { title: '贴金与罩漆', desc: '贴金与罩漆——金箔需用丝绸轻轻贴敷，确保无气泡、无褶皱；最后罩上透明大漆，金色经久不褪，光泽温润', img: 'https://aka.doubaocdn.com/s/Qaj61wWzPg' }
+                { title: '选材与干燥', desc: '选材与干燥——潮州木雕首选樟木，纹理细腻、材质柔韧；木材需阴干三年以上，防止雕刻时开裂变形', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chaozhou+teochew+wood+carving+raw+material+camphor+wood+blocks+seasoned+dried+stacked+in+traditional+workshop+wood+grain+visible+natural+light+8K&image_size=square_hd' },
+                { title: '起草与打胚', desc: '起草与打胚——根据祠堂梁架尺寸放样，用斧头凿出大体轮廓；打胚要预留层次，为后续多层镂空做准备', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chaozhou+wood+carving+rough+carving+stage+craftsman+using+axe+and+chisel+to+roughly+shape+the+wood+block+outline+pattern+markings+on+wood+8K&image_size=square_hd' },
+                { title: '分层镂空', desc: '分层镂空——这是潮州木雕的核心技艺，从最深处向外逐层雕刻；薄处仅2-3毫米，却能承受百年摇晃不脱落', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chaozhou+wood+carving+multi+layer+piercing+openwork+shrimp+crab+basket+carving+incredible+detailed+hollow+out+carving+showing+multiple+layers+depth+8K&image_size=square_hd' },
+                { title: '贴金与罩漆', desc: '贴金与罩漆——金箔需用丝绸轻轻贴敷，确保无气泡、无褶皱；最后罩上透明大漆，金色经久不褪，光泽温润', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Chaozhou+gold+foil+gilding+process+artisan+hands+carefully+applying+gold+leaf+onto+carved+wooden+surface+using+silk+cloth+brush+golden+sheen+protective+clear+lacquer+8K&image_size=square_hd' }
             ]
         },
         {
             name: '端砚制作',
             steps: [
-                { title: '寻矿与采石', desc: '寻矿与采石——端砚产自肇庆端州，砚坑多在深山溪涧旁；采石需在每年枯水期，工人潜入水坑用铁钎撬取石料', img: 'https://aka.doubaocdn.com/s/sUUB1wWzKV' },
-                { title: '相石与设计', desc: '相石与设计——老匠人凭经验判断石料品相，优劣全凭眼力；优质砚石会有石眼、蕉叶白、冰纹等天然纹理，需巧妙融入设计', img: 'https://aka.doubaocdn.com/s/rl0G1wXLBD' },
-                { title: '雕刻与打磨', desc: '雕刻与打磨——端砚以浅雕为主，讲究"以刀代笔"；雕刻后用细砂反复打磨，从粗磨到细磨再到油石，最后用人手掌心抛光', img: 'https://aka.doubaocdn.com/s/AzB01wWzDO' },
-                { title: '上蜡与养护', desc: '上蜡与养护——用白蜡烛融化后薄涂砚面，形成保护层；好的端砚"发墨不损毫"，研磨时墨汁细润，笔尖如新', img: 'https://aka.doubaocdn.com/s/hWdI1wXLBD' }
+                { title: '寻矿与采石', desc: '寻矿与采石——端砚产自肇庆端州，砚坑多在深山溪涧旁；采石需在每年枯水期，工人潜入水坑用铁钎撬取石料', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Duan+inkstone+quarry+mining+Zhaoqing+stream+valley+quarry+miners+extracting+stone+from+mountain+stream+bed+with+iron+chisel+natural+landscape+8K&image_size=square_hd' },
+                { title: '相石与设计', desc: '相石与设计——老匠人凭经验判断石料品相，优劣全凭眼力；优质砚石会有石眼、蕉叶白、冰纹等天然纹理，需巧妙融入设计', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Duan+inkstone+raw+stone+assessment+experienced+old+artisan+examining+natural+stone+patterns+stone+eyes+banana+leaf+white+ice+crack+markings+on+raw+slate+8K&image_size=square_hd' },
+                { title: '雕刻与打磨', desc: '雕刻与打磨——端砚以浅雕为主，讲究"以刀代笔"；雕刻后用细砂反复打磨，从粗磨到细磨再到油石，最后用人手掌心抛光', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Duan+inkstone+carving+and+polishing+artisan+hands+carefully+carving+shallow+relief+design+on+ink+slab+fine+sand+polishing+with+palm+of+hand+final+polish+8K&image_size=square_hd' },
+                { title: '上蜡与养护', desc: '上蜡与养护——用白蜡烛融化后薄涂砚面，形成保护层；好的端砚"发墨不损毫"，研磨时墨汁细润，笔尖如新', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Duan+inkstone+waxing+finishing+process+melted+white+candle+wax+being+thinly+brushed+onto+stone+surface+creating+protective+layer+finished+inkstone+glowing+warm+sheen+8K&image_size=square_hd' }
             ]
         },
         {
             name: '石湾公仔',
             steps: [
-                { title: '炼泥与揉泥', desc: '炼泥与揉泥——石湾陶泥取自东平河畔，含有丰富的石英和云母；陶泥需反复揉练，排除气泡，使泥质细腻均匀', img: 'https://aka.doubaocdn.com/s/LN5T1wXLIE' },
-                { title: '塑形与雕刻', desc: '塑形与雕刻——石湾公仔以手工捏塑为主，一气呵成；人物开相需凭经验把控表情，眼神、嘴角微微不同，人物神韵便截然不同', img: 'https://aka.doubaocdn.com/s/qtjZ1wXLIE' },
-                { title: '上釉与施彩', desc: '上釉与施彩——石湾釉色浑厚著称，有天青、翠绿、乌金等经典釉色；釉水需调配得当，厚薄不一会产生窑变，形成独一无二的效果', img: 'https://aka.doubaocdn.com/s/SXMZ1wWzMo' },
-                { title: '入窑与出窑', desc: '入窑与出窑——公仔阴干后装窑，以1100度高温烧制；出窑时机最考验经验，早了颜色暗淡，迟了釉面会过火起泡', img: 'https://aka.doubaocdn.com/s/zdyt1wWzN7' }
+                { title: '炼泥与揉泥', desc: '炼泥与揉泥——石湾陶泥取自东平河畔，含有丰富的石英和云母；陶泥需反复揉练，排除气泡，使泥质细腻均匀', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Shiwan+ceramic+clay+kneading+process+artisan+hands+kneading+and+wedging+red+clay+from+Dongping+River+removing+air+bubbles+pottery+studio+8K&image_size=square_hd' },
+                { title: '塑形与雕刻', desc: '塑形与雕刻——石湾公仔以手工捏塑为主，一气呵成；人物开相需凭经验把控表情，眼神、嘴角微微不同，人物神韵便截然不同', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Shiwan+figurine+hand+sculpting+process+artisan+fingers+molding+clay+figurine+face+details+expressive+features+delicate+carving+tools+for+facial+expression+8K&image_size=square_hd' },
+                { title: '上釉与施彩', desc: '上釉与施彩——石湾釉色浑厚著称，有天青、翠绿、乌金等经典釉色；釉水需调配得当，厚薄不一会产生窑变，形成独一无二的效果', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Shiwan+ceramic+glazing+process+artisan+applying+thick+glaze+celadon+turquoise+copper+gold+glaze+colors+onto+dried+clay+figurine+brush+and+ladle+8K&image_size=square_hd' },
+                { title: '入窑与出窑', desc: '入窑与出窑——公仔阴干后装窑，以1100度高温烧制；出窑时机最考验经验，早了颜色暗淡，迟了釉面会过火起泡', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Shiwan+ceramic+kiln+firing+figurines+loaded+into+dragon+kiln+1100+celsius+high+temperature+glowing+fire+artisan+watching+critically+at+opening+8K&image_size=square_hd' }
             ]
         },
         {
             name: '岭南灰塑',
             steps: [
-                { title: '备料与发酵', desc: '备料与发酵——灰塑以石灰为主要原料，加入红糖、糯米、头发等材料增加韧性；原料需密封发酵三个月以上，让石灰完全熟化', img: 'https://aka.doubaocdn.com/s/lGGc1wXLNk' },
-                { title: '扎骨与塑形', desc: '扎骨与塑形——先用竹篾扎出骨架，再敷上灰膏层层叠加；大型灰塑需内嵌钢筋支撑，确保屋脊上的作品能抵御台风', img: 'https://aka.doubaocdn.com/s/SA3W1wXLNl' },
-                { title: '精雕与上色', desc: '精雕与上色——趁灰膏半干时用工具精雕细琢；人物开脸、花鸟翎羽需一刀成型；完全干透后施以矿物颜料彩绘', img: 'https://aka.doubaocdn.com/s/COZG1wWzDf' },
-                { title: '安装与养护', desc: '安装与养护——灰塑需在晴天安装，与瓦面交接处用石灰密封防水；日常无需维护，历经百年仍色彩鲜艳', img: 'https://aka.doubaocdn.com/s/0fHD1wWzDf' }
+                { title: '备料与发酵', desc: '备料与发酵——灰塑以石灰为主要原料，加入红糖、糯米、头发等材料增加韧性；原料需密封发酵三个月以上，让石灰完全熟化', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Lingnan+lime+sculpture+material+preparation+lime+mixed+with+brown+sugar+glutinous+rice+and+hair+fiber+traditional+ingredients+sealed+in+container+fermenting+for+months+8K&image_size=square_hd' },
+                { title: '扎骨与塑形', desc: '扎骨与塑形——先用竹篾扎出骨架，再敷上灰膏层层叠加；大型灰塑需内嵌钢筋支撑，确保屋脊上的作品能抵御台风', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Lingnan+lime+plaster+rooftop+decoration+building+process+bamboo+frame+skeleton+tied+reinforced+with+steel+rebars+applying+layers+of+lime+plaster+atop+roof+ridge+8K&image_size=square_hd' },
+                { title: '精雕与上色', desc: '精雕与上色——趁灰膏半干时用工具精雕细琢；人物开脸、花鸟翎羽需一刀成型；完全干透后施以矿物颜料彩绘', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Lingnan+lime+plaster+sculpture+fine+carving+and+coloring+semi+dry+lime+paste+being+detailed+carved+with+fine+tools+then+hand+painted+with+mineral+pigments+vibrant+colors+8K&image_size=square_hd' },
+                { title: '安装与养护', desc: '安装与养护——灰塑需在晴天安装，与瓦面交接处用石灰密封防水；日常无需维护，历经百年仍色彩鲜艳', img: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional+photography+of+Lingnan+lime+plaster+rooftop+ornaments+installation+sunny+day+artisans+securing+sculpture+on+temple+rooftop+ridge+sealing+joints+with+lime+colorful+ornaments+against+blue+sky+8K&image_size=square_hd' }
             ]
         }
     ];
@@ -3843,12 +3992,12 @@
     <script>
 (function() {
     var ACHIEVEMENTS = [
-        { id: 'first_visit', icon: '&#9733;', name: '初入岭南', desc: '首次访问岭南万象' },
-        { id: 'explorer', icon: '&#9830;', name: '文化探索者', desc: '查看3个非遗详情', threshold: 3 },
-        { id: 'foodie', icon: '&#9829;', name: '美食家', desc: '收藏5道岭南美食', threshold: 5 },
-        { id: 'arch_lover', icon: '&#9632;', name: '建筑爱好者', desc: '查看所有建筑图鉴', threshold: 6 },
-        { id: 'craft_master', icon: '&#9674;', name: '工艺大师', desc: '看完一个工艺的所有步骤', threshold: 6 },
-        { id: 'lingnan_pass', icon: '&#9826;', name: '岭南通', desc: '解锁所有其他成就' }
+        { id: 'first_visit', icon: '\u2B50', name: '初入岭南', desc: '首次访问岭南万象' },
+        { id: 'explorer', icon: '\uD83D\uDD2E', name: '文化探索者', desc: '查看3个非遗详情', threshold: 3 },
+        { id: 'foodie', icon: '\uD83C\uDF5C', name: '美食家', desc: '收藏5道岭南美食', threshold: 5 },
+        { id: 'arch_lover', icon: '\uD83C\uDFDB', name: '建筑爱好者', desc: '查看所有建筑图鉴', threshold: 6 },
+        { id: 'craft_master', icon: '\uD83D\uDD28', name: '工艺大师', desc: '看完一个工艺的所有步骤', threshold: 6 },
+        { id: 'lingnan_pass', icon: '\uD83D\uDC51', name: '岭南通', desc: '解锁所有其他成就' }
     ];
 
     var unlockedAchievements = [];
